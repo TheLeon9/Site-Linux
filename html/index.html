@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe16</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" type="image/png" href="./assets/images//16.png">
+</head>
+
+<body>
+    <div class="starwars-demo">
+        <img src="./assets/images/GRouPe.png" alt="Star" class="star">
+        <h2 class="byline" id="byline">ANDRE FLORIAN DUANE</h2>
+        <img src="./assets/images/16.png" alt="Wars" class="wars">
+    </div>
+    <div class="wrapper">
+        <div class="scroll-text">
+            <h1>LINUX</h1>
+            <h2>MONSIEUR, LAINE VINCENT </h2>
+            <p> Pour ce projet, nous avons choisis le PROJET N°2, Avec pour projet perso le Reverse proxy. </p>
+            <p> Pour ce faire, nous avons utiliser des Machine Virtuel sous Debian 10 avec : </p>
+            <p class="mid">Une Machine MAITRE</p>
+            <p class="mid">Une Machine ESCLAVE</p>
+            <p class="mid">Une Machine CLIENTE</p>
+            <p class="mid">Une Machine SERVEUR-WEB, avec APACHE / REVERSE-PROXY, avec NGINX</p>
+            <p>Le projet était a faire en groupe de 2/3, nous avons choisis pour notre part d'etres en groupe de 3.</p>
+            <p class="mid">Les membres étants : </p>
+            <p class="mid">MORACCHINI Florian B2C INFORMATIQUE,</p>
+            <p class="mid">CLAVERIA André B2C INFORMATIQUE,</p>
+            <p class="mid">ESTRADE Duane B2C INFORMATIQUE.</p>
+            <p class="mid">Nous avons donc :</p>
+            <p>1 service DNS Maitre, <br> 1 service DNS esclave, <br> 1 service DHCP avec DNS Dynamique, <br> 1 serveur web https, avec une page en accès par mot de passe, <br> 1 service ftp sécurisé en SSL et <br>  1 projet perso </p>
+            <p>Pour finir, voici une citation de maitre YODA</p>
+
+        </div>
+        <div class="fin">
+            <p class="debut">«UN JEDI UTILISE LA FORCE POUR LA CONNAISSANCE ET LA DÉFENSE, JAMAIS POUR L’ATTAQUE.» <span>YODA</span></p>
+            <p class="lien"> Pour avoir de la force cliquer sur le prochain lien ! ^^</p>
+            <div class="link">
+                <a href="https://www.youtube.com/watch?v=JaPf-MRKITg&ab_channel=abdallex"> |FORCE| </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var byline = document.getElementById('byline'); // Find the H2
+    bylineText = byline.innerHTML; // Get the content of the H2
+    bylineArr = bylineText.split(''); // Split content into array
+    byline.innerHTML = ''; // Empty current content
+
+    var span; // Create variables to create elements
+    var letter;
+
+    for (i = 0; i < bylineArr.length; i++) { // Loop for every letter
+        span = document.createElement("span"); // Create a <span> element
+        letter = document.createTextNode(bylineArr[i]); // Create the letter
+        if (bylineArr[i] == ' ') { // If the letter is a space...
+            byline.appendChild(letter); // ...Add the space without a span
+        } else {
+            span.appendChild(letter); // Add the letter to the span
+            byline.appendChild(span); // Add the span to the h2
+        }
+    }
+</script>
+
+</html>
